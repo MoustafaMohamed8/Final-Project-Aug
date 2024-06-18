@@ -21,7 +21,7 @@ TRAIN_DATA_PATH = os.path.join(os.getcwd(), 'diabetes.csv')
 df = pd.read_csv(TRAIN_DATA_PATH)
 
 diabetes_data = df.copy(deep = True)
-diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']] = diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']].replace(0,np.NaN)
+diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']] = diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']].replace(0,np.nan)
 
 diabetes_data['Glucose'].fillna(diabetes_data['Glucose'].mean(), inplace = True)
 diabetes_data['BloodPressure'].fillna(diabetes_data['BloodPressure'].mean(), inplace = True)
